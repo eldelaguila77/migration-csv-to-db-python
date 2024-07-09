@@ -1,0 +1,32 @@
+version: '3.9'
+services:
+  app:
+    build: .
+    volumes:
+      - ./app:/app
+      - ./config:/config
+      - ./crontab:/etc/cron.d/crontab
+      - ./data:/data
+
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_NAME=testDB
+      - DB_USER=root
+      - DB_PASSWORD=secret
+      - DB_PORT=3306 
+  db:
+    image: mysql:5.7
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: testDB
+      MYSQL_USER: test_user
+      MYSQL_PASSWORD: secret
+    ports:
+      - "3307:3306"
+
+volumes:
+  db-data:

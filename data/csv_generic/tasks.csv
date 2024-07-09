@@ -1,0 +1,8 @@
+id,name,description,status,enabled,price
+5,"Task 5","Description for task 5 updated","Pending",true,"11.22"
+6,"Task 6","Description for task 6","Pending",false,"12500.12"
+1,"Task 1","Description for task1 float largo","Updated",true,"56.19"
+16,"Task 16","Description for task16 created","Pending",false,0.0
+17,Task 17,"Description for task17 updated","Complete",true,999999.99
+18,Task 18,Description for task18 updated float largo,Complete,false,10000576.0
+4,Task 4,registro 4 editado decimal largo,Complete,true,200.0

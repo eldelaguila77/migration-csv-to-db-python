@@ -1,0 +1,7 @@
+* * * * * echo "Hello World" >> /var/log/cron.log 2>&1
+#* * * * * ls
+#* * * * * echo "hola mundo"
+#* * * * * ls /app >> /var/log/cron.log 2>&1
+#* * * * * ls /app/app >> /var/log/cron.log 2>&1
+* * * * * /usr/local/bin/python /app/main.py >> /var/log/cron.log 2>&1
+# Esta línea ejecuta main.py cada minuto
